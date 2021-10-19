@@ -1,0 +1,68 @@
+#include <stdio.h>
+
+int balok(int v){
+   int p,l,t;
+
+    printf("Masukkan panjang = ");
+    scanf("%d", &p);
+    printf("Masukkan lebar = ");
+    scanf("%d", &l);
+    printf("masukkan tinggi = ");
+    scanf("%d", &t);
+
+    v=p*l*t;
+    
+    printf("Volume balok= %d", v);
+}
+
+ int kubus(int v){
+     int s;
+     
+     printf(" masukka sisi = ");
+     scanf("%d", &s);
+     
+     v=s*s*s;
+     
+     printf("volume kubus=%d", v);
+ }
+ 
+float limas(float v){
+     float s,t;
+     
+     printf("masukkan sisi= ");
+     scanf("%f", &s);
+     printf("masukkan tinggi= ");
+     scanf("%f", &t);
+     
+     v=1.0/3*s*s*t;
+     
+     printf("volume limas=%.2f", v);
+ }
+
+
+
+int main()
+{
+    int pilihan;
+
+    puts("--------------------------------------------------");
+    printf("Masukkan bangun yang akan dihitung!\n1. balok \n2. kubus \n3. limas  =\n");
+    scanf("%d", &pilihan);
+
+    if (pilihan==1){
+            int v;
+            balok(v);
+        }
+    else if (pilihan==2){
+            int v;
+            kubus(v);
+        }
+    else if (pilihan==3){
+            int v;
+            limas(v);
+        }
+    else{
+        printf("Pilihan anda tidak ada dalam program. Ulangi sesuai dengan program yang sudah ada!");
+    }
+    
+}
